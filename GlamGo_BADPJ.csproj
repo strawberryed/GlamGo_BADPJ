@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="Nav.Master.cs">
       <DependentUpon>Nav.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Nav.Master.designer.cs">
       <DependentUpon>Nav.Master</DependentUpon>

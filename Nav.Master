@@ -5,94 +5,65 @@
 <html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
+
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="navBar" runat="server">
-                <!-- Navbar -->
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
 
-                        <!-- Logo (image) -->
-                        <a class="navbar-brand d-flex align-items-center" href="#">
-                            <img
-                                src="C:\Users\abbyc\OneDrive\BADPJ\final proj\GlamGo_BADPJ\Images\GlamGo logo.png"
-                                alt="Logo"
-                                width="32"
-                                height="32"
-                                class="d-inline-block align-text-top me-2" />
-                            <!-- Optional text next to logo -->
-                            <span class="fw-semibold">YourBrand</span>
-                        </a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
 
-                        <!-- Mobile toggle button -->
-                        <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#mainNavbar"
-                            aria-controls="mainNavbar"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="<%= ResolveUrl("~/Images/GlamGo_logo.png") %>"
+                        alt="Logo" height="32"
+                        class="d-inline-block align-text-top me-2" />
+                    <span class="fw-semibold">YourBrand</span>
+                </a>
 
-                        <!-- Collapsible content -->
-                        <div class="collapse navbar-collapse" id="mainNavbar">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                            <!-- Left nav links -->
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Browse</a></li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Browse</a>
-                                </li>
-
-                                <!-- Dropdown: More -->
-                                <li class="nav-item dropdown">
-                                    <a
-                                        class="nav-link dropdown-toggle"
-                                        href="#"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false">More
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">About Us</a></li>
-                                        <li><a class="dropdown-item" href="#">Policy</a></li>
-                                    </ul>
-                                </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Policy</a></li>
                             </ul>
+                        </li>
+                    </ul>
 
-                            <!-- Search bar -->
-                            <form class="d-flex me-lg-3 mb-2 mb-lg-0" role="search">
-                                <input
-                                    class="form-control me-2"
-                                    type="search"
-                                    placeholder="Search"
-                                    aria-label="Search" />
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-
-                            <!-- Auth buttons -->
-                            <div class="d-flex gap-2">
-                                <a class="btn btn-outline-primary" href="#">Log in</a>
-                                <a class="btn btn-primary" href="#">Sign up</a>
-                            </div>
-                        </div>
+                    <!-- no nested form -->
+                    <div class="d-flex me-lg-3 mb-2 mb-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="button">Search</button>
                     </div>
-                </nav>
 
-                <!-- Bootstrap JS bundle (required for dropdown/toggler) -->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-primary" href="#">Log in</a>
+                        <a class="btn btn-primary" href="#">Sign up</a>
+                    </div>
+                </div>
 
-            </asp:ContentPlaceHolder>
-        </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </form>
 </body>
+
 </html>

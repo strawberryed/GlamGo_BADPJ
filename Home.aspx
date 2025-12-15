@@ -2,4 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="navBar" runat="server">
+    <h1>Welcome</h1>
 </asp:Content>
