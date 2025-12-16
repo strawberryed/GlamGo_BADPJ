@@ -11,7 +11,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="navBar" runat="server">
+            <asp:ContentPlaceHolder ID="navbar" runat="server">
+
             </asp:ContentPlaceHolder>
         </div>
     </form>
